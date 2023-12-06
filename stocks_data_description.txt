@@ -6,47 +6,73 @@ secid:
 ts:
     Временная метка - object
 
-put_orders
+put_orders:
+    Количество поставленных сделок - int64
 
-put_orders_b
+put_orders_b:
+    Количество заявок на покупку - int64
 
-put_orders_s
+put_orders_s:
+    Количество заявок на продажу - int64
 
-put_vol
+put_vol:
+    Объем завок - int64
 
-put_vol_b
+put_vol_b:
+    Объем зявок на покупку - int64
 
-put_vol_s
+put_vol_s:
+    Объем заявок на продажу - int64
 
-put_val
+put_val:
+    Объем завок, поставленных/снятых в стакан (₽) - float
 
-put_val_b
+put_val_b:
+    Объем завок на покупку - float
 
-put_val_s
+put_val_s:
+    Объем завок на продажу - float
 
-cancel_orders
+cancel_orders:
+    Количество отмененных сделок - int64
 
-cancel_orders_b
+cancel_orders_b:
+    Количество отмененных сделок на покупку - int64
 
-cancel_orders_s
+cancel_orders_s:
+    Количество отмененных сделок на продажу - int64
 
-cancel_vol
+cancel_vol:
+    Объем завок, снятых в стакан - int64
 
-cancel_vol_b
+cancel_vol_b:
+    Объем завок на покупку, снятых в стакан - int64
 
-cancel_vol_s
+cancel_vol_s:
+    Объем завок на продажу, снятых в стакан - int64
 
-cancel_val
+cancel_val:
+    Объем завок, снятых в стакан (₽)
 
-cancel_val_b
+cancel_val_b:
+    Объем завок на покупку, снятых в стакан (₽)
 
-cancel_val_s
+cancel_val_s:
+    Объем завок на продажу, снятых в стакан (₽)
 
-put_vmap_b
+put_vmap_b:
+put_vmap_s:
+cancel_vwap_b:
+cancel_vwap_s:
+    Средневзвешенная цена выставленных/отмененных заявок на покупку и продажу,
+    соответственно — это средняя цена заявки покупки или продажи,
+    весом которых является объем соответствующих сделок.
 
-put_vmap_s
+    Формула
+    put_vwap_b = put_val_b / put_vol_b
 
-cancel_vwap_b
+    Пример:
+    Есть 2 сделки на покупку: 100 акций по 10 рублей и 200 акций по 20 рублей, тогда:
+    put_vwap_b = (100*10 + 200*20) / (100 + 200) = 16.67 ₽
 
-cancel_vwap_s
 
