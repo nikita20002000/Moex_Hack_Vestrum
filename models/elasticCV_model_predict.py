@@ -22,6 +22,6 @@ def predict_pr_close(tradestats_model, X_pred):
     except Exception:
         print('Ошибка при масштабировании признаков')
 
-        return tradestats_model.predict(X_pred)
+    return tradestats_model.predict(X_pred)
 
 
