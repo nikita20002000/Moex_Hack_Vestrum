@@ -69,7 +69,7 @@
 .image-3-icon {
   position: absolute;
   top: 47.13rem;
-  left: calc(50% - 104px);
+  left: calc(50% - 6rem);
   width: 13rem;
   height: 3.75rem;
   object-fit: cover;
@@ -610,4 +610,14 @@
   height: 64rem;
   font-size: var(--font-size-base);
   color: var(--color4);
+}
+
+a.navlink {
+  color: black; /* задаем цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+
+}
+
+#navlink {
+    text-decoration: none;
 }

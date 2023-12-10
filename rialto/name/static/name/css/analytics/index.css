@@ -295,3 +295,8 @@ html {
   color: var(--color-black);
   font-family: var(--font);
 }
+a.navlink {
+  color: black; /* задаем цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+
+}

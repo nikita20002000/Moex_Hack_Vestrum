@@ -28,7 +28,7 @@
               src="{% static 'name/img/global/vuesaxlinearmenu.svg' %}"
             />
 
-            <div class="vestrum">Инструменты</div>
+            <a class="navlink" href="{% url 'dashboard' %}">Инструменты</a>
           </div>
           <div class="frame-parent">
             <div class="vuesaxlinearactivity-parent">
@@ -38,7 +38,7 @@
                 src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
               />
 
-              <div class="vestrum">Аналитика</div>
+              <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
             </div>
             <div class="vuesaxlinearactivity-parent">
               <img
@@ -47,7 +47,7 @@
                 src="{% static 'name/img/global/vuesaxlineartrade.svg' %}"
               />
 
-              <div class="vestrum">Лента</div>
+              <a class="navlink" href="{% url 'newsline' %}">Лента</a>
             </div>
             <div class="vuesaxlinearactivity-parent">
               <img
@@ -56,7 +56,7 @@
                 src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
               />
 
-              <div class="vestrum">Аккаунт</div>
+              <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
             </div>
             <div class="component-4">
               <div class="vuesaxlinearmenu">
@@ -82,7 +82,7 @@
               src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
             />
 
-            <div class="vestrum">Каталог</div>
+            <a class="navlink" href="{% url 'catalogue' %}">Каталог</a>
           </div>
         </div>
         <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}" />
@@ -95,7 +95,25 @@
             <div class="vestrum">vestrum</div>
           </div>
         </div>
-        <div class="div8">31 декабря 2023 г. 23:59:59</div>
+        <div class="div8"><div>
+            <script>
+                alert(new Date());
+            </script>
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
         <div class="parent">
           <div class="div9">
             <div class="vuesaxlinearsearch-normal">
@@ -274,7 +292,7 @@
               <div class="frame">
                 <div class="div30">10 000 $</div>
               </div>
-              <img class="polygon-icon" alt="" src="{% static 'name/img/wallet/polygon-14.svg' }" />
+              <img class="polygon-icon" alt="" src="{% static 'name/img/wallet/polygon-14.svg' %}" />
             </div>
             <div class="div31">Перейти →</div>
           </div>

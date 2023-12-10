@@ -543,7 +543,7 @@
   font-weight: 500;
   color: var(--color1);
   display: inline-block;
-  width: 7.13rem;
+  width: 8.13rem;
   height: 1.44rem;
   flex-shrink: 0;
 }
@@ -988,4 +988,10 @@
   height: 87.56rem;
   font-size: var(--font-size-base);
   color: var(--color3);
+}
+
+a.navlink {
+  color: black; /* задаем цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+
 }

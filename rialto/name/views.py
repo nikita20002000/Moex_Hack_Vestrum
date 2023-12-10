@@ -5,6 +5,7 @@ def index(request):
     return render(request, 'name/index.html')
 
 def dashboard(request):
+    
     return render(request, 'name/dashboard.html')
 
 def analytics(request):

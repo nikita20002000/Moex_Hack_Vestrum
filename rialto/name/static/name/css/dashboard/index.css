@@ -563,3 +563,9 @@
     width: 9.13rem;
     height: 2.88rem;
 }
+
+a.navlink {
+  color: black; /* задаем цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+
+}

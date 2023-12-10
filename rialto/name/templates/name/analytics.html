@@ -28,7 +28,7 @@
               src="{% static 'name/img/global/vuesaxlinearmenu.svg' %}"
             />
 
-            <div class="div2">Инструменты</div>
+            <a class="navlink" href="{% url 'dashboard' %}">Инструменты</a>
           </div>
           <div class="component-2">
             <div class="vuesaxlinearmenu">
@@ -54,7 +54,7 @@
                 src="{% static 'name/img/global/vuesaxlineartrade.svg' %}"
               />
 
-              <div class="div2">Лента</div>
+              <a class="navlink" href="{% url 'newsline' %}">Лента</a>
             </div>
             <div class="vuesaxlineartrade-parent">
               <img
@@ -63,7 +63,7 @@
                 src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
               />
 
-              <div class="div2">Аккаунт</div>
+              <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
             </div>
             <div class="vuesaxlineartrade-parent">
               <img
@@ -82,7 +82,7 @@
               src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
             />
 
-            <div class="div2">Каталог</div>
+            <a class="navlink" href="{% url 'wallet' %}">Кошелек</a>
           </div>
         </div>
         <img class="image-3-icon" alt="" src="{% static 'name/img/global/image-3@2x.png' %}" />
@@ -95,7 +95,25 @@
             <h3 class="vestrum">vestrum</h3>
           </div>
         </div>
-        <div class="div8">31 декабря 2023 г. 23:59:59</div>
+        <div class="div8"><div>
+            <script>
+                alert(new Date());
+            </script>
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
         <div class="parent">
           <div class="div9">
             <div class="vuesaxlinearsearch-normal">

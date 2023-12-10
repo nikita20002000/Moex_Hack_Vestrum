@@ -40,7 +40,7 @@
                   src="{% static 'name/img/global/vuesaxlinearactivity.svg' %}"
           />
 
-          <div class="vestrum">Аналитика</div>
+          <a class="navlink" href="{% url 'analytics' %}">Аналитика</a>
         </div>
         <div class="vuesaxlinearactivity-parent">
           <img
@@ -49,7 +49,7 @@
                   src="{% static 'name/img/global/vuesaxlineartrade.svg' %}"
           />
 
-          <div class="vestrum">Лента</div>
+          <a class="navlink" href="{% url 'newsline' %}">Лента</a>
         </div>
         <div class="vuesaxlinearactivity-parent">
           <img
@@ -58,7 +58,7 @@
                   src="{% static 'name/img/global/vuesaxlinearuser.svg' %}"
           />
 
-          <div class="vestrum">Аккаунт</div>
+          <a class="navlink" href="{% url 'account' %}">Аккаунт</a>
         </div>
         <div class="vuesaxlinearactivity-parent">
           <img
@@ -67,7 +67,7 @@
                   src="{% static 'name/img/global/vuesaxlinearwallet2.svg' %}"
           />
 
-          <div class="vestrum">Кошелек</div>
+          <a class="navlink" href="{% url 'wallet' %}">Кошелек</a>
         </div>
         <div class="vuesaxlinearactivity-parent">
           <img
@@ -76,7 +76,7 @@
                   src="{% static 'name/img/global/vuesaxlinearcatalogue.svg' %}"
           />
 
-          <div class="vestrum">Каталог</div>
+          <a class="navlink" href="{% url 'catalogue' %}">Каталог</a>
         </div>
       </div>
     </div>
@@ -90,7 +90,25 @@
         <div class="vestrum">vestrum</div>
       </div>
     </div>
-    <div class="div6">31 декабря 2023 г. 23:59:59</div>
+    <div class="div6"><div>
+            <script>
+                alert(new Date());
+            </script>
+            <div id="time-node"></div>
+
+            <script>
+               var timeNode = document.getElementById('time-node');
+
+               function getCurrentTimeString() {
+                  return new Date().toTimeString().replace(/ .*/, '');
+               }
+
+               setInterval(
+                  () => timeNode.innerHTML = getCurrentTimeString(),
+                  1000
+               );
+            </script>
+        </div></div>
     <div class="parent">
       <div class="div7">
         <div class="vuesaxlinearsearch-normal">
