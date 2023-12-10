@@ -26,3 +26,6 @@ def catalogue(request):
 
 def review(request):
     return render(request, 'name/review.html')
+
+def catalogue2(request):
+    return render(request, 'name/catalogue2.html')

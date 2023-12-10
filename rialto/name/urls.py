@@ -15,5 +15,6 @@ urlpatterns = [
     path('wallet', views.wallet, name='wallet'),
     path('catalogue', views.catalogue, name='catalogue'),
     path('review', views.review, name='review'),
+    path('catalogue2', views.catalogue2, name='catalogue2')
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
