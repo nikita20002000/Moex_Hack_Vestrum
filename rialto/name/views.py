@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .scripts.news_parser import Newsletter
+from .scripts.currency_parsing import Value
 
 
 def dashboard(request):
@@ -48,7 +49,6 @@ def analytics(request):
 def newsline(request):
     news = Newsletter()
     news_data = news.top_10_news()
-    print(news_data[0])
     
     return render(request, 'name/newsline.html', context=news_data)
 
@@ -66,7 +66,8 @@ def wallet(request):
 
 
 def catalogue(request):
-    return render(request, 'name/catalogue.html')
+    value_dict = Value().get_currency_price()
+    return render(request, 'name/catalogue.html', context=value_dict)
 
 
 def review(request):
