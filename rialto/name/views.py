@@ -1,19 +1,11 @@
 from django.shortcuts import render
-
-
-# def index(request):
-#     return render(request, 'name/index.html')
-
-
-# data = dict()
-# for cur in value_urls:
-#     data[cur] = get_currency_price(value_urls[cur], headers)
+from .scripts.news_parser import Newsletter
 
 
 def dashboard(request):
     import requests as req
     from bs4 import BeautifulSoup
-    import schedule
+
     import time
 
     value_urls = {
@@ -54,7 +46,11 @@ def analytics(request):
 
 
 def newsline(request):
-    return render(request, 'name/newsline.html')
+    news = Newsletter()
+    news_data = news.top_10_news()
+    print(news_data[0])
+    
+    return render(request, 'name/newsline.html', context=news_data)
 
 
 def news(request):
