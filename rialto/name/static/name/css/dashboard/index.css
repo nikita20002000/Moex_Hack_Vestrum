@@ -247,7 +247,7 @@
   font-size: var(--font-size);
 }
 .h2 {
-  top: 36.83rem;
+  top: 52.83rem;
   left: 19.25rem;
   font-size: var(--font1-size);
 }
@@ -378,7 +378,7 @@
   left: 88rem;
 }
 .rectangle-div {
-  top: 39.5rem;
+  top: 55.5rem;
   left: 49.13rem;
   width: 53.5%;
   height: 21.38rem;
@@ -395,7 +395,7 @@
   top: 16.63rem;
   left: 18.38rem;
   width: 81.5%;
-  height: 18.5rem;
+  height: 34.5rem;
 
 }
 .group-child {
@@ -519,7 +519,7 @@
 }
 .rectangle-parent {
   position: absolute;
-  top: 39.5rem;
+  top: 55.5rem;
   left: 18.88rem;
   width: 27.69rem;
   height: 21.38rem;
@@ -549,7 +549,7 @@
   position: relative;
   background-color: var(--color3);
   width: 100%;
-  height: 64rem;
+  height: 80rem;
   overflow: hidden;
   text-align: left;
   font-size: var(--font2-size);
@@ -558,14 +558,31 @@
 }
 .marquee {
     position: absolute;
-    top: 10.81rem;
+    top: 8.81rem;
     left: 48.25rem;
     width: 9.13rem;
-    height: 2.88rem;
+    height: 6.88rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
+.marquee p {
+    display: inline-block;
+    margin-right: 20px; /* Расстояние между элементами */
+}
+.variable {
+    display: block;
+    font-weight: normal
+}
 a.navlink {
   color: black; /* задаем цвет текста ссылки */
   text-decoration: none; /* убираем подчеркивание */
 
 }
+
+

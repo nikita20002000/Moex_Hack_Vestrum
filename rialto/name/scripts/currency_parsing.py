@@ -1,5 +1,8 @@
 import requests as req
 from bs4 import BeautifulSoup
+import schedule
+import time
+
 
 value_urls = {
     'DOLLAR_RUB': 'https://www.google.com/search?q=%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80+%D0%BA+%D1%80%D1%83%D0%B1%D0%BB%D1%8E&client=safari&sca_esv=589207572&rls=en&sxsrf=AM9HkKnmnrrpGFAmm8WqX2jsR9pYU78ueQ%3A1702071065198&ei=GYtzZejjC-nNwPAPpJy12AY&ved=0ahUKEwio1OTp5ICDAxXpJhAIHSRODWsQ4dUDCA8&uact=5&oq=%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80+%D0%BA+%D1%80%D1%83%D0%B1%D0%BB%D1%8E&gs_lp=Egxnd3Mtd2l6LXNlcnAiGtC00L7Qu9C70LDRgCDQuiDRgNGD0LHQu9GOMgsQABiABBixAxiDATIFEAAYgAQyChAAGIAEGBQYhwIyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESLkgUABYwh5wA3gBkAEAmAFooAGNCaoBBDE2LjG4AQPIAQD4AQGoAhTCAgQQIxgnwgINEAAYgAQYsQMYgwEYCsICCxAuGIAEGMcBGNEDwgIPEAAYgAQYsQMYgwEYChgqwgIKEC4YgAQYigUYQ8ICCRAAGAEYgAQYCsICBxAAGIAEGArCAgkQLhgBGIAEGArCAgsQABgBGIAEGAoYKsICDxAAGAEYgAQYsQMYgwEYCsICBxAjGOoCGCfCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AEBwgIWEAAYAxiPARjlAhjqAhi0AhiMA9gBAcICERAuGIAEGLEDGIMBGMcBGNEDwgIOEC4YgAQYigUYsQMYgwHCAgsQLhiABBixAxiDAcICDhAAGIAEGIoFGLEDGIMBwgIKECMYgAQYigUYJ8ICChAAGIAEGIoFGEPCAhAQABiABBiKBRhDGLEDGIMBwgINEAAYgAQYigUYQxixA8ICCxAAGIAEGLEDGMkD4gMEGAAgQYgGAboGBggBEAEYCw&sclient=gws-wiz-serp',
@@ -25,4 +28,11 @@ def get_currency_price(url, headers):
 
     return convert[0].text
 
-print(get_currency_price(value_urls['EURO_RUB'], headers))
+
+def to_data(value_urls, headers):
+    data = dict()
+    for cur in value_urls:
+        data[cur] = get_currency_price(value_urls[cur], headers)
+    return data
+
+print(type(to_data(value_urls, headers)))

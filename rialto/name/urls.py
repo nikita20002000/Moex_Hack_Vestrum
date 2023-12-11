@@ -6,8 +6,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('dashboard', views.dashboard, name='dashboard'),
+    # path('', views.index, name='home'),
+    path('', views.dashboard, name='dashboard'),
     path('analytics', views.analytics, name='analytics'),
     path('newsline', views.newsline, name='newsline'),
     path('news', views.news, name='news'),

@@ -5,6 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <link rel="stylesheet" href="{% static 'name/css/dashboard/graphic.css" />
   <link rel="stylesheet" href="{% static 'name/css/dashboard/global.css' %}" />
   <link rel="stylesheet" href="{% static 'name/css/dashboard/index.css' %}" />
   <link rel="stylesheet" href="{% static 'name/css/index.css' %}" />
@@ -91,9 +96,7 @@
       </div>
     </div>
     <div class="div6"><div>
-            <script>
-                alert(new Date());
-            </script>
+
             <div id="time-node"></div>
 
             <script>
@@ -154,35 +157,56 @@
     <div class="div13">Индексы</div>
   </button>
   <div class="inner"></div>
-  <div class='marquee' style='overflow:hidden; width: 80%'>АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ АНДРЕЙ ГЕЙ</div>
+  <div class='marquee tnse' style='overflow:hidden; width: 80%'>
+    <p>USD/RUB<span class="variable">{{ DOLLAR_RUB }}</span></p>
+    <p>EUR/RUB<span class="variable">{{ EURO_RUB }}</span></p>
+    <p>GBP/RUB<span class="variable">{{  POUND_RUB }}</span></p>
+    <p>CHF/RUB<span class="variable">{{ SWISSFRANK_RUB }}</span></p>
+    <p>CNY/RUB<span class="variable">{{ CHINAUAN_RUB }}</span></p>
+    <p>JPY/RUB<span class="variable">{{ JAPANIENA_RUB }}</span></p>
+    <p>TRY/RUB<span class="variable">{{ LIRA_RUN }}</span></p>
+    <p>KZT/RUB<span class="variable">{{ TENGE_RUN }}</span></p>
+    <p>AMD/RUB<span class="variable">{{ LIPARIT_RUB }}</span></p>
+    <p>BYR/RUB<span class="variable">{{ BELRUB_RUB }}</span></p></div>
+<!--margin-right: 20px;float: left;display:flex;flex-direction: row; gap:2rem-->
+  <!--  <div class='marquee div14' style='overflow:hidden; width: 80%'></div>-->
 
-  <div class="component-21">
-    <div class="tnse">TNSE</div>
-    <div class="div14">3380,0</div>
-    <div class="div15">+2,9%</div>
-  </div>
-  <div class="component-22">
-    <div class="tnse">TNSE</div>
-    <div class="div14">3380,0</div>
-    <div class="div15">+2,9%</div>
-  </div>
-  <div class="component-23">
-    <div class="tnse">TNSE</div>
-    <div class="div14">3380,0</div>
-    <div class="div15">+2,9%</div>
-  </div>
-  <div class="component-24">
-    <div class="tnse">TNSE</div>
-    <div class="div14">3380,0</div>
-    <div class="div15">+2,9%</div>
-  </div>
-  <div class="component-241">
-    <div class="tnse">TNSE</div>
-    <div class="div14">3380,0</div>
-    <div class="div15">+2,9%</div>
-  </div>
+<!--  <div class="component-21">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+<!--  <div class="component-22">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+<!--  <div class="component-23">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+<!--  <div class="component-24">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
+<!--  <div class="component-241">-->
+<!--    <div class="tnse">TNSE</div>-->
+<!--    <div class="div14">3380,0</div>-->
+<!--    <div class="div15">+2,9%</div>-->
+<!--  </div>-->
   <div class="rectangle-div"></div>
-  <section class="rectangle-section"></section>
+  <div class="rectangle-section">
+     <figure class="highcharts-figure">
+        <div id="container"></div>
+<!--            <p class="highcharts-description">-->
+<!--            Добавляй хоть ща-->
+<!--            </p>-->
+       <script src="{% static 'name/js/graphic.js' %}"></script>
+    </figure>
+
+  </div>
   <div class="rectangle-parent">
     <div class="group-child"></div>
     <div class="component-25">
@@ -265,8 +289,8 @@
       <div class="div13">Смотреть все</div>
     </button>
   </div>
-  <div class="div37">график</div>
-  <div class="div38">статистика какая-то</div>
+<!--  <div class="div37">график</div>-->
+<!--  <div class="div38">статистика какая-то</div>-->
 </main>
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

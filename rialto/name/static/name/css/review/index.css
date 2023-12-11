@@ -557,3 +557,8 @@
   font-size: var(--font-size-base);
   color: var(--color3);
 }
+a.navlink {
+  color: black; /* задаем цвет текста ссылки */
+  text-decoration: none; /* убираем подчеркивание */
+
+}
